@@ -19,6 +19,11 @@ use PhpParser\Node\Expr\List_;
 // get all listing
 Route::get('/', [ListingController::class, "index"]);
 
-// get single listing
+// show create page
+Route::get('/listings/create', [ListingController::class, "create"]);
 
-Route::get('/{id}', [ListingController::class, "show"]);
+// store single listing
+Route::post('/listings', [ListingController::class, "store"]);
+
+// get single listing
+Route::get('/listings/{id}', [ListingController::class, "show"]);
